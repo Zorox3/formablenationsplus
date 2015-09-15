@@ -1,0 +1,103 @@
+country_decisions = {
+
+	Lombardy_nation = {
+		major = yes
+		
+		potential = {
+		
+			NOT = { exists = ITA }
+			NOT = { exists = LOM }
+		
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+		
+			OR = {
+				primary_culture = venetian
+				primary_cultire = lombard
+				capital = 104
+			}
+			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 7
+				}
+			}
+		
+		}
+		
+		
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			
+			owns_core_province = 104
+			owns_core_province = 105
+			owns_core_province = 106
+			owns_core_province = 107
+			owns_core_province = 108
+			owns_core_province = 109
+			owns_core_province = 111
+			owns_core_province = 112
+			owns_core_province = 113
+			owns_core_province = 114
+			owns_core_province  = 1774
+			owns_core_province  = 1862
+			owns_core_province = 2979
+
+		}
+		
+		effect = {
+	  		set_capital = 104
+			add_prestige = 25
+			add_stability = 1
+			change_tag = LOM
+			
+			swap_free_idea_group = yes
+			
+			add_accepted_culture = venetian
+			add_accepted_culture = lombard
+			
+			change_government = administrative_monarchy
+			
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = {
+					country_event = { id = hre_event.5 }
+				}
+			}
+			
+			
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			
+			
+			lombardia = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = LOM
+			}
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,45 @@
+country_decisions = {
+
+	Barbary_nation = {
+		major = yes
+		potential = {
+			NOT = { exist = BYS }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR ={
+			tag = MOR
+			tag = ALG
+			tag = FEZ
+			tag = TUN
+			tag = TRP
+			
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 344	# Marrakech
+			owns_core_province = 338	# Al-Djazir
+			owns_core_province = 341	# Tunis
+			owns_core_province = 354	# Tripoli
+
+		}
+		effect = {
+			change_tag = BYS
+			add_prestige = 25
+			add_stability = 1
+			add_legitimacy = 25
+		}
+	}
+	
+	
+
+}

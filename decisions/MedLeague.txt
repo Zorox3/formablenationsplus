@@ -1,0 +1,57 @@
+country_decisions = {
+
+	MedLeague_nation = {
+		major = yes
+		potential = {
+			NOT = { exist = MDL }
+			NOT = { tag = ITA }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+			tag = VEN
+			tag = SIC
+			tag = SAR
+			tag = COR
+			tag = KNI
+			tag = CYP
+			tag = CRT
+			tag = GEN
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 163	
+			owns_core_province = 124	
+			owns_core_province = 125	
+			owns_core_province = 127	
+			owns_core_province = 1247	
+			owns_core_province = 333	
+		}
+		effect = {
+			add_prestige = 25
+			add_stability = 1
+			add_legitimacy = 50
+			change_tag = MDL	
+			if = {
+				limit = {
+					government = monarchy
+				}
+				change_government = merchant_republic
+			}
+		}
+		
+		}
+	}
+	
+	
+
+}

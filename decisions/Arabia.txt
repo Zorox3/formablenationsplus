@@ -1,0 +1,44 @@
+country_decisions = {
+
+	Arabia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ARB }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = bedouin_arabic
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 392 
+			owns_core_province = 388 
+			owns_core_province = 400 
+			owns_core_province = 402
+			owns_core_province = 408 
+			owns_core_province = 383 
+			
+		}
+	 	effect = {
+			add_prestige = 25
+			add_legitimacy = 25
+			add_stability = 2
+			change_tag = ARB
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

@@ -1,0 +1,18 @@
+government = merchant_republic
+#aristocracy_plutocracy = 1
+#centralization_decentralization = 2
+#innovative_narrowminded = 1
+mercantilism = 0.25
+#offensive_defensive = 3
+#land_naval = 3
+#quality_quantity = -1
+#serfdom_freesubjects = 0
+primary_culture = lombard
+religion = catholic
+add_accepted_culture = greek
+add_accepted_culture = croatian
+technology_group = western
+capital = 112 # Venezia
+historical_friend = KNI
+historical_friend = HAB
+

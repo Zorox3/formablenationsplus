@@ -1,0 +1,51 @@
+country_decisions = {
+
+	TwoSicilies_nation = {
+		major = yes
+		potential = {
+			NOT = { exist = TSI }
+			NOT = { tag = ITA }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+			tag = NAP
+			tag = SIC
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 12
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 120	# Abruzzi
+			owns_core_province = 121	# Napoli
+			owns_core_province = 122	# Salento
+			owns_core_province = 123	# Calabria
+			owns_core_province = 124	# Messina
+			owns_core_province = 125	# Palermo
+	
+		}
+		effect = {
+			add_prestige = 25
+			add_stability = 1
+			add_legitimacy = 50
+			change_tag = TSI	
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = republic
+			}
+		}
+	}
+	
+	
+
+}

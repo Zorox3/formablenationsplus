@@ -1,0 +1,58 @@
+country_decisions = {
+
+	Lotharingia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NED }
+			NOT = { exists = LTH }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = burgundian
+				primary_culture = rheinlaender
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 75 # Elsass
+			owns_core_province = 80 # Trier
+			owns_core_province = 83 # Nassau	
+			owns_core_province = 84 # Berg
+			owns_core_province = 85 # Koln
+			owns_core_province = 86 # Munster			
+			owns_core_province = 187 # Barrois
+			owns_core_province = 188 # Metz
+			owns_core_province = 189 # Lotharingen
+			owns_core_province = 1760 # Koblenz
+			owns_core_province = 1761 # Pfalz
+			owns_core_province = 1878 # Aachen			
+			owns_core_province = 1880 # Sudgau
+
+		}
+	 	effect = {
+	  		set_capital = 189
+			add_prestige = 25
+			add_legitimacy = 25
+			add_stability = 1
+			change_tag = LTH
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = BUR
+			}
+		}
+		ai_importance = 400
+	}
+	
+}

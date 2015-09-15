@@ -1,0 +1,44 @@
+
+#Lombardy-Venice
+
+LOM_ideas = {
+	start = {
+		diplomatic_reputation = 2
+		discipline = 0.075
+	}
+
+	bonus = {
+		infantry_power = 0.15
+	}
+	
+	trigger = {
+		tag = LOM
+	}
+	
+	free = yes		#will be added at load.
+	
+
+	orm_secure_trading_monopoly = {
+		global_trade_power = 0.1
+	}
+	venetian_arsenal = {
+		naval_forcelimit_modifier = 0.15
+		galley_cost = -0.10
+	}
+	renaissance_prince = {
+		technology_cost = -0.1
+	}
+	tuscan_arts = {
+		prestige = 1
+		legitimacy = 0.5
+	}
+	folwark_system = {
+		production_efficiency = 0.1
+	}
+	letter_of_majesty = {
+		global_unrest = -1
+	}
+	phanariote_taxes = {
+		global_tax_modifier = 0.1
+	}
+}

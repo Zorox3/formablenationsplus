@@ -1,0 +1,49 @@
+country_decisions = {
+
+	AlpsUnion_nation = {
+		major = yes
+		potential = {
+			NOT = { exist = APU }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }		
+			OR = {
+			tag = SWI
+			tag = SAV
+			tag = MLO
+				}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 165	# Bern
+			owns_core_province = 166	# Waldstätte
+			owns_core_province = 1873	# Graubünden
+			owns_core_province = 103	# Piedmont
+			owns_core_province = 104	# Lombardia
+			owns_core_province = 1871	# Wallis
+			owns_core_province = 1875	# Cuneo
+			owns_core_province = 107	# Brescia
+	
+		}
+		effect = {
+			add_prestige = 25
+			add_stability = 1
+			add_legitimacy = 25
+			change_tag = APU	
+			add_accepted_culture = lombard
+			add_accepted_culture = rheinlaender
+		}
+		
+	}
+	
+	
+
+}

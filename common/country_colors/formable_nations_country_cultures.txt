@@ -1,0 +1,67 @@
+#Formable nations galore country colours
+
+AHG = {
+    color1= { 240 240 230  }
+    color2= { 255 250 240  }
+    color3= { 255 255 255  }
+}
+UKB = {
+    color1= { 193 26 14  }
+    color2= { 99 137 153  }
+    color3= { 83 149 105  }
+}
+TSI = {
+	color1= { 107 142 35  }
+    color2= { 152 85 92  }
+    color3= { 80 79 88  }
+	}
+BYS = {
+    color1= { 220 202 96  }
+    color2= { 152 85 92  }
+    color3= { 99 137 153  }
+	}	
+UCI = {
+    color1= { 229 112 147  }
+    color2= { 152 85 92  }
+    color3= { 99 137 153  }
+	}
+ADS = {
+	color1= { 194 205 83  }
+	color2= { 136 157 23  }
+    color3= { 17 16 203  }
+}
+APU = {
+    color1= { 240 240 230  }
+    color2= { 255 250 240  }
+    color3= { 255 255 255  }
+}
+MDL = {
+    color1= { 29 94 194  }
+    color2= { 255 206 0  }
+    color3= { 29 94 194  }
+}
+LTH = {
+    color1= { 222 149 33  }
+    color2= { 255 255 255  }
+    color3= { 49 116 224  }
+}
+ARB = {
+	color1= { 194 205 83  }
+	color2= { 136 157 23  }
+    color3= { 17 16 203  }
+}
+ISL = {
+    color1= { 170 0 6  }
+    color2= { 248 196 32  }
+    color3= { 170 0 6  }
+}
+CTR = {
+    color1= { 170 0 6  }
+    color2= { 248 196 32  }
+    color3= { 170 0 6  }
+}
+GAU = {
+    color1= { 170 0 6  }
+    color2= { 248 196 32  }
+    color3= { 170 0 6  }
+}

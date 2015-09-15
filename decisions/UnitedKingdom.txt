@@ -1,0 +1,59 @@
+country_decisions = {
+
+	UnitedKingdom_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = UKB }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				culture_group = british
+				primary_culture = welsh
+				tag = IRE
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 236		# London
+			owns_core_province = 237		# Oxfordshire
+			owns_core_province = 234		# Wessex
+			owns_core_province = 248		# Lothian
+			owns_core_province = 251		# Aberdeen
+			owns_core_province = 373		# Meath
+		}
+		effect = {
+			british_isles = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = UKB
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			change_tag = UKB
+			UKB = {
+				set_capital = 236
+			}
+			add_accepted_culture = irish
+			culture_group_union = british
+			add_stability = 1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 0
+	}
+	
+}

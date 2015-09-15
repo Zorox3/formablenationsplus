@@ -1,0 +1,82 @@
+country_decisions = {
+
+	AustriaHungary_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = AHG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {				
+				tag = HAB
+				tag = HUN
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		allow = {
+			adm_tech = 3
+			is_subject = no
+			is_at_war = no
+		OR = {
+			AND = {
+				#Austrian Provinces:
+					owns_core_province = 73 # Tirol
+					owns_core_province = 110 # Trent
+					owns_core_province = 128 # Karnten
+					owns_core_province = 132 # Steiermark
+					owns_core_province = 133 # Linz
+					owns_core_province = 134 # Wien
+					owns_core_province = 1768# Lienz
+					owns_core_province = 1770# Ostmarch
+					owns_core_province = 1863# Graz
+
+
+				#Hungarian Provinces:
+					owns_core_province = 135 # Sopron
+					owns_core_province = 153 # Pest
+					owns_core_province = 154 # Szepes
+					owns_core_province = 155 # Bekes
+					owns_core_province = 156 # Temes
+					owns_core_province = 157 # Bihar
+					owns_core_province = 158 # Maros
+					owns_core_province = 162 # Zemplen
+					owns_core_province = 1772# Pozsony
+					owns_core_province = 1864# Somogy
+					owns_core_province = 1951# Hunyad
+					owns_core_province = 1952# Maramaros
+					owns_core_province = 1953# Szabolcs
+					owns_core_province = 1954# Torontal
+
+				}
+				
+				# AUSTRIA IS THE LEADER OF THE PU
+				AND = {
+					HUN = {
+						is_subject_of = ROOT
+						has_opinion = { who = HAB value = 120 }
+					}
+					has_opinion = { who = HUN value = 120 }
+				}
+				
+			}			
+		}
+	 	effect = {
+	  		add_prestige = -40
+			change_tag = AHG
+			swap_free_idea_group = yes		
+			add_accepted_culture = hungarian
+			add_accepted_culture = austrian
+			add_stability = 3
+			change_government = imperial_government
+			}
+
+		}
+		
+	}
+	
+

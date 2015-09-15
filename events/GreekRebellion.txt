@@ -1,0 +1,157 @@
+namespace = Formable
+
+country_event = {
+	id = Formable.1
+	title = "EVTNAMEFORM1"
+	desc = "EVTDESCFORM1"
+	picture = ANGRY_MOB_eventPicture
+
+	trigger = {
+		is_year = 1650
+		NOT = { exists = GRE }
+		NOT = { exists = ATH }
+		NOT = { exists = EPI }
+		NOT = { exists = MOE }
+		NOT = { exists = NAX }
+		NOT = { exists = CRT }
+		NOT = { exists = BYZ }
+		NOT = { exists = ACH }
+		NOT = { has_country_flag = greek_nationalism }
+		GRE = {
+			NOT = {
+				OR = {
+					is_core = 142		# Corfu
+					is_core = 144		# Epirus
+					is_core = 145		# Morea
+					is_core = 146		# Athens
+					is_core = 147		# Thessaly
+					is_core = 148		# Macedonia
+					is_core = 149		# Edirne
+					is_core = 163		# Crete
+					is_core = 164		# Naxos
+					is_core = 1773		# Naxos
+				}
+			}
+		}
+			OR = {
+			AND ={
+			owns = 142
+			142={ has_owner_culture = no }
+			}
+		AND ={
+			owns = 144
+			144={ has_owner_culture = no }
+			}
+			AND ={
+			owns = 145
+			145={ has_owner_culture = no }
+			}
+		AND ={
+			owns = 146
+			146={ has_owner_culture = no }
+			}
+		AND ={
+			owns = 147
+			147={ has_owner_culture = no }
+			}
+		AND ={
+			owns = 148
+			148={ has_owner_culture = no }
+			}			
+		AND ={
+			owns = 149
+			149={ has_owner_culture = no }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 480
+
+		modifier = {
+			factor = 0.9
+			economic_ideas = 5
+		}
+		modifier = {
+			factor = 0.9
+			economic_ideas = 6
+		}
+		modifier = {
+			factor = 0.9
+			economic_ideas = 7
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { economic_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { economic_ideas = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 1.1
+			stability = 1
+		}
+		modifier = {
+			factor = 1.1
+			stability = 2
+		}
+		modifier = {
+			factor = 1.1
+			stability = 3
+		}		
+		modifier = {
+			factor = 0.9
+			is_year = 1760
+		}
+		modifier = {
+			factor = 0.8
+			is_year = 1780
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAFORM1"
+		remove_accepted_culture = greek
+		set_country_flag = greek_nationalism
+		GRE = {
+					is_core = 142		# Corfu
+					add_core = 144		# Epirus
+					add_core = 145		# Morea
+					add_core = 146		# Athens
+					add_core = 147		# Thessaly
+					add_core = 148		# Macedonia
+					add_core = 149		# Edirne
+					add_core = 163		# Crete
+					add_core = 164		# Naxos
+					add_core = 1773		# Naxos
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					province_id = 144
+					province_id = 145
+					province_id = 146
+					province_id = 147
+					province_id = 148
+					province_id = 149
+					province_id = 163
+				}
+				is_overseas = no
+			}
+			nationalist_rebels = 30
+		}
+	}
+}
